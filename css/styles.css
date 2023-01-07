@@ -1,0 +1,630 @@
+@font-face{
+    font-family: mainFont;
+    src: url(../fonts/MusticaPro-SemiBold.otf);
+}
+@font-face{
+    font-family: circleFont;
+    src: url(../fonts/Heading-Pro-Heavy-trial.ttf);
+}
+@font-face{
+    font-family: headerFont;
+    src: url(../fonts/UniNeue-Trial-Heavy.ttf);
+}
+
+
+/*Start the home page styling here*/
+html{
+    scroll-behavior: auto;
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    font-family: headerFont;
+    text-shadow: 2px 2px 8px rgba(33, 153, 77);
+    animation: glow_once 3s normal;
+    font-size: 25px;
+}
+h6{
+    display: center;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.indexBody{
+    background-color: rgb(33, 172, 84);
+    font-family: mainFont;
+    margin: 0;
+    overflow: hidden;
+}
+
+.maindiv{
+    background-color: rgb(50, 50, 50);
+    padding-top: 2px;
+    padding-bottom: 120px;
+}
+
+
+#todaysGoal{
+    display: flex; /*ensure the button is responsive*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*margin-top: 200px;*/
+    min-height: 32vh;
+    /*animation: grow 2.5s infinite;*/
+    position: relative;
+    top: 150px;
+    
+    margin-left: 90px;
+    margin-right: 90px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    
+    margin-bottom: 90px;
+
+}
+.greenCircle{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /*filter: drop-shadow(0px 0px 9px rgb(69, 223, 26));*/
+    animation: glow_circle 2s ease-in-out infinite alternate;
+}
+
+.whiteCircle{
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    opacity: 78%;
+}
+
+
+#buttonText{
+    position: absolute;
+    text-align: center;
+    font-family: circleFont;
+    margin: 0 auto;
+
+    font-size: 35px;
+    
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 2px 3px rgba(17, 193, 41, 0.551);
+}
+
+
+/*Button animation*/
+@keyframes grow {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.06);}
+    100% {transform: scale(1);}
+}
+
+
+  
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1px rgb(0, 52, 0), 0 0 3px rgb(0, 66, 2), 0 0 5px rgb(0, 154, 5), 0 0 7px rgb(0, 187, 6);
+    }
+    to {
+        text-shadow: 0 0 7px rgb(0, 69, 24), 0 0 5px rgb(0, 210, 7), 0 0 3px rgb(0, 187, 6), 0 0 1px rgb(0, 112, 4);
+    }
+}
+@keyframes glow_circle {
+    from {
+        filter: drop-shadow(0px 0px 9px rgb(69, 223, 26));
+    }
+    to {
+        filter: drop-shadow(0px 0px 15px rgb(69, 223, 26));
+    }
+}
+@keyframes glow_circle_profile {
+    from {
+        filter: drop-shadow(0px 0px 5px rgb(69, 223, 26));
+    }
+    to {
+        filter: drop-shadow(0px 0px 9px rgb(69, 223, 26));
+    }
+}
+@keyframes glow_once{
+    from {
+        text-shadow: 0 0 20px rgb(0, 52, 0), 0 0 30px rgb(0, 66, 2), 0 0 40px rgb(0, 154, 5), 0 0 50px rgb(55, 244, 3, 0.581);
+    }
+    /*
+    to {
+        text-shadow: 0 0 7px rgb(0, 69, 24), 0 0 5px rgb(0, 210, 7), 0 0 3px rgb(0, 187, 6), 0 0 1px rgb(0, 112, 4);
+    }
+    */
+}
+/*Progress Bar*/
+.progress {
+    
+    margin: 30px auto;
+    padding: 2px;
+    margin-bottom: 500px;
+    
+    width: 80%;
+    max-width: 500px;
+    border: 3px solid #05e35e;
+    
+    border-radius: 17px;
+    height: 20px;
+    position:relative;
+    top: 150px;
+
+}
+
+  
+.progress .progressBar {
+    width: 7%; /*Set width of progress bar. Will need to change later with java script*/
+    background-color: #05e35e;
+    border-radius: 10px;
+    height: 100%;
+    white-space: nowrap;
+}
+.progressText{
+    position: relative;
+    top: -35px;
+    margin: 0;
+    color:white;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 1px 1px rgba(49, 186, 11, 0.745);
+}
+
+
+/*Nav Bar*/
+
+.navbar ul{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(33, 153, 77);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(55, 244, 3, 0.581);
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    
+    padding-left: 0;
+    
+    flex-basis: 100%;
+    margin: auto 0;
+    
+}
+
+
+.navbar li{
+
+
+    text-align: center;
+    list-style-type: none;
+    
+    padding: 7px;
+    margin-top: 4px;
+
+    
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+    font-size: 7px;
+    animation: glow_once 3s normal;
+
+}
+
+.navbar a{
+    text-decoration: none;
+    color:white;
+
+}
+
+#icon-large{
+    font-size: 20pt;
+
+}
+.wrd{
+    font-size: 16px;
+    font-family: mainFont; /*The padding under the home is still messed up here for some reason.*/
+    padding-top: 7px !important;
+}
+
+.navbar a:hover{
+    cursor: pointer;
+    
+}
+.navbar a:hover{
+    color: black;
+}
+
+
+/*Start the catalog styling here*/
+
+.catalogBody{
+    background-color: rgb(33, 172, 84);
+    font-family: mainFont;
+    margin: 0;
+}
+.border{
+    /*border: solid 5px rgb(15, 224, 71);*/
+    border: solid 5px rgb(0, 0, 0);
+    box-shadow: 3px 3px 50px rgb(0, 0, 0);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgba(21, 21, 21, 0.512);
+}
+#savingBorder{
+    height: 935px;
+}
+#spendingBorder{
+    height: 365px;
+}
+#investingBorder{
+    height: 365px;
+}
+#economyBorder{
+    height: 365px;
+}
+#taxesBorder{
+    height: 365px;
+}
+#cryptoBorder{
+    height: 365px;
+}
+#retirementBorder{
+    height: 365px;
+}
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    text-align:center;
+    font-size: 30px;
+    text-shadow: 1px 1px 5px rgba(55, 244, 3, 0.581);
+    animation: glow 1s ease-in-out infinite alternate;
+    background-color: rgb(20, 93, 47);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.titleDivide{
+    display: block;
+    /*border: 2px solid rgb(15, 224, 71);*/
+    border: 2px solid rgb(0, 0, 0);
+}
+.lessonDivide{
+    display: block;
+    border: 2px solid rgb(107, 107, 107);
+    margin-left: -10px;
+}
+.lessons a{
+    color:white;
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: headerFont;
+    text-decoration: none;
+}
+.lessons{
+    margin-left: 10px;
+}
+
+.unlocked, .locked{
+    margin: 0 auto;
+    padding: 25px;
+}
+.unlocked:after{
+    content: '\f3c1';
+    font-family: "FontAwesome";
+    margin-left: 15px;
+    color:rgb(8, 255, 41);
+    text-shadow: 1px 1px 5px rgba(31, 130, 3, 0.581);
+}
+.locked:after{
+    content: '\f023';
+    font-family: "FontAwesome";
+    margin-left: 15px;
+    color: rgb(180, 110, 110);
+}
+
+.catalog-grid-container{
+    color: white;
+    display: grid;
+    grid-template-rows: repeat(1fr, 6);
+    grid-gap: 15px;
+    margin-top: 35px;
+}
+.indexButton{
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 20px rgb(0, 0, 0);
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    color:white;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(20, 93, 47);
+    border-radius: 25px;
+}
+
+
+
+/*Profile Page Styling Here*/
+
+.profilePic{
+    width: 50%;
+    margin: 70px 25% 80%;
+    padding: 0;
+    display: table;
+    position: relative;
+
+}
+#image{/*Choose File Button*/
+    
+    width: 175px;
+    height: 135px;
+    border: 1px solid #dadada;
+    color: #000a06;
+    text-align:justify;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight:normal;
+    font-family: 'Muli', sans-serif;
+    border-radius:50%;
+    opacity: 1%;
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+    
+
+    background-color:#000a06 !important;
+    border:1px solid #dadada;
+
+    display: flex; /*ensure the button is responsive*/
+    align-items: center;
+    justify-content: center;
+    
+    padding-bottom: 40px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    
+}
+::file-selector-button {
+    display: none;
+  }
+
+.form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#defaultPic{
+    width: 175px;
+    height: 170px;
+    /*filter: drop-shadow(0px 0px 9px rgb(69, 223, 26));*/
+    position:  relative;
+    animation: glow_circle_profile 2s ease-in-out infinite alternate;
+}
+
+
+#addPic{
+    width: 30px;
+    height: 30px;
+    position:  relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 170px;
+    left:73px;
+    opacity: 80%;
+    
+}
+.profileInformation{
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    bottom: 250px;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+}
+.signup, .login{
+    background-color: rgb(20, 93, 47);
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    width: 200px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 20px rgb(0, 0, 0);
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
+
+
+
+
+
+/*Media Queries*/
+
+/*iPad Air*/
+@media(min-width: 768px){
+    .navbar li{
+        
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+    #icon-large{
+        font-size: 30pt;
+    
+    }
+    .wrd{
+        font-size: 24px;
+        font-family: mainFont; /*The padding under the home is still messed up here for some reason.*/
+        padding-top: 7px !important;
+    }
+    .greenCircle{
+        width: 320px;
+        height: 320px;
+    }
+    .whiteCircle{
+        width: 330px;
+        height: 330px;
+    }
+    #buttonText{
+        font-size: 50px;
+    }
+    #todaysGoal{
+        min-height: 35vh;
+        top: 250px;
+    }
+    .progress{
+        top: 290px;
+    }
+    .progressText{
+        font-size: 30px;
+        top: -50px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h6{
+        font-size: 30px;
+    }
+    /*Catalog page for iPad Air*/
+    .catalog-grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+        column-gap: 20px;
+    }
+    .lessons a{
+        font-size: 30px;
+    }
+    .indexButton{
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 40px;
+    }
+    .maindiv{
+        padding-bottom: 200px;
+    }
+    #savingBorder{
+        height: 1060px;
+    }
+    #spendingBorder{
+        height: 400px;
+    }
+    #investingBorder{
+        height: 400px;
+    }
+    #economyBorder{
+        height: 400px;
+    }
+    #taxesBorder{
+        height: 400px;
+    }
+    #cryptoBorder{
+        height: 400px;
+    }
+    #retirementBorder{
+        height: 400px;
+    }
+    /*Profile Page for iPad Air*/
+    #image{/*Choose File Button*/
+        width: 300px;
+        height: 270px;
+        bottom: 55px;
+    }
+    #defaultPic{
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+
+    }
+    #addPic{
+        width: 60px;
+        height: 60px;
+        bottom: 300px;
+        left: 118px;
+
+    }
+
+}
+
+@media(max-width: 280px){/*Galaxy Fold*/
+    .navbar li{
+
+
+        text-align: center;
+        list-style-type: none;
+        
+        padding: 0.3rem;
+    
+        
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        
+        font-size: 0.3rem;
+    }
+    h6{
+        font-size: 14px;
+    }
+    .lessons{
+        font-size: 15px;
+    }
+    .indexButton{
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 25px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    #savingBorder{
+        height: 730px;
+    }
+    #spendingBorder{
+        height: 280px;
+    }
+    #investingBorder{
+        height: 280px;
+    }
+    #economyBorder{
+        height: 280px;
+    }
+    #taxesBorder{
+        height: 280px;
+    }
+    #cryptoBorder{
+        height: 280px;
+    }
+    #retirementBorder{
+        height: 280px;
+    }
+    
+}
+@media(max-height: 640px){
+    .progress{
+        top: 140px;
+    }
+}
